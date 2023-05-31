@@ -30,7 +30,6 @@ def main():
     range1 = (26, 0, 0)
     range2 = (86, 255, 255)
     mask1 = image_processor.create_mask(range1, range2)
-    #display_image("hsv image", mask1, 3000)
 
     # Apply morphological operations to the mask
     kernel1_size = (5, 5)
