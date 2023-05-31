@@ -32,5 +32,5 @@ On sending a POST request to http://localhost:5000/detect-buds with the input im
 perform disease detection on the image and return the output detected image which is stored in results/diseases_output.jpg.
 
 To run the web-service:
-'''python web-service/app.py'''
-'''python web-service/test.py'''
+''' python web-service/app.py '''
+''' python web-service/test.py '''

@@ -19,7 +19,7 @@ response = requests.post(url, data=img_encoded.tobytes(), headers=headers)
 
 # Process the response
 if response.status_code == 200:
-    with open('mask.jpg', 'wb') as f:
+    with open('results/diseased_output.jpg', 'wb') as f:
         f.write(response.content)
 else:
     print('Error:', response.status_code)
