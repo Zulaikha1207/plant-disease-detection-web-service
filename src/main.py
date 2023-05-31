@@ -38,9 +38,13 @@ def main():
 
     # Display original image, binary image, HSV image, and result
     display_image("img", img, 3000)
+    cv2.imwrite("results/original_image.png", img)
     display_image("binary", mask1, 3000)
+    cv2.imwrite("results/threshold_mask.png", mask1)
     display_image("hsv", hsv, 3000)
+    cv2.imwrite("results/hsv_mask.png", hsv)
     display_image("morphed", mask2, 3000)
+    cv2.imwrite("results/morphed_mask.png", mask2)
 
     # Calculate severity of disease
     x = cv2.countNonZero(mask2)
@@ -51,7 +55,7 @@ def main():
     result = image_processor.create_masked_image(mask2)
     
     display_image("result", result, 3000)
-    cv2.imwrite("ouput.png", result)
+    cv2.imwrite("results/output.png", result)
 
 
 if __name__ == "__main__":
